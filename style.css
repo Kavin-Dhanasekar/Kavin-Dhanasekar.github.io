@@ -1,0 +1,42 @@
+
+
+.heading {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 4em;
+}
+
+.project-container {
+    display: flex;
+}
+
+.projects {
+    margin: auto;
+}
+
+.subheading {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 3em;
+}
+
+.button {
+    background-color: rgb(108, 142, 255);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.subheading2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    color: rgb(108, 126, 186);
+}
