@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+            display: flex;
+        }
+
+        .section.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Home Section */
+        #home {
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #home div {
+            text-align: center;
+        }
+
+        /* Video Section */
+        #video {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Students Section */
+        #students {
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        #students a {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #students button {
+            min-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Home Section -->
+    <div id="home" class="section active">
+        <div>
+            <h1>Click if you are from 6M</h1>
+            <button onclick="showSection('video')">🤐</button>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div id="video" class="section">
+        <video controls autoplay muted>
+            <source src="360p-watermark.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Students Section -->
+    <div id="students" class="section">
+        <a href="">
+            <button>If your name starts with the letter "A"</button>
+            <button>If your name starts with the letter "B"</button>
+            <button>If your name starts with the letter "C"</button>
+            <button>If your name starts with the letter "D"</button>
+            <button>If your name starts with the letter "E"</button>
+            <button>If your name starts with the letter "F"</button>
+            <button>If your name starts with the letter "G"</button>
+            <button>If your name starts with the letter "H"</button>
+            <button>If your name starts with the letter "I"</button>
+            <button>If your name starts with the letter "J"</button>
+            <button>If your name starts with the letter "K"</button>
+            <button>If your name starts with the letter "L"</button>
+            <button>If your name starts with the letter "M"</button>
+            <button>If your name starts with the letter "N"</button>
+            <button>If your name starts with the letter "O"</button>
+            <button>If your name starts with the letter "P"</button>
+            <button>If your name starts with the letter "Q"</button>    
+            <button>If your name starts with the letter "R"</button>
+            <button>If your name starts with the letter "S"</button>
+            <button>If your name starts with the letter "T"</button>
+            <button>If your name starts with the letter "U"</button>
+            <button>If your name starts with the letter "V"</button>
+            <button>If your name starts with the letter "W"</button>
+            <button>If your name starts with the letter "X"</button>
+            <button>If your name starts with the letter "Y"</button>
+            <button>If your name starts with the letter "Z"</button>
+        </a>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
